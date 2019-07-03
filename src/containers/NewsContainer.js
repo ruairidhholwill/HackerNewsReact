@@ -22,6 +22,7 @@ class NewsContainer extends Component{
      
             Promise.all(promises)
             .then((results) => {
+                console.log(results)
                 this.setState({ stories: results });
               });
           });

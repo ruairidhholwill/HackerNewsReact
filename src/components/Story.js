@@ -3,10 +3,15 @@ import StoryList from './StoryList'
 
 const Story = (props) => {
     const storyData = props.storiesData.map(story => {
-        return <h3>{story.title}</h3>
+        return(
+            <div>
+            <li key={story.id}><a href={story.url}>{story.title}</a></li>
+            <h4>{story.score}</h4>
+            </div>
+        )
     })
 
-    return storyData
+    return (<ul>{storyData}</ul>)
 }
 
 export default Story

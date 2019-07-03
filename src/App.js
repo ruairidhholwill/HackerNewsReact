@@ -4,7 +4,10 @@ import NewsContainer from './containers/NewsContainer';
 
 function App() {
   return (
-  <NewsContainer />
+    <div>
+    <h2>Hacker News</h2>,
+    <NewsContainer />
+    </div>
   )
 }
 

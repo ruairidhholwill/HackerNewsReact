@@ -6,6 +6,7 @@ const StoryList = ({stories}) => {
 
     const storiesData = stories.map((story) => {
         return {
+            id: story.id,
             title: story.title,
             username: story.by,
             url: story.url,
