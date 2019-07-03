@@ -1,11 +1,12 @@
 import React, {Component} from "react"
+import StoryList from '../components/StoryList'
 
 class NewsContainer extends Component{
 
     constructor(props){
         super(props)
         this.state = {
-            stories: null
+            stories: []
         }
     }
 
@@ -21,18 +22,14 @@ class NewsContainer extends Component{
      
             Promise.all(promises)
             .then((results) => {
-                console.log(results)
                 this.setState({ stories: results });
               });
           });
         }
 
     render(){
-        return this.state.stories
+        return <StoryList stories = {this.state.stories}/>
     }
-
-
-
 
 }
 
