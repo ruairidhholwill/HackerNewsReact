@@ -7,7 +7,7 @@ const Story = (props) => {
         console.log(ts)
         return(
             <Fragment>
-            <li key={story.id}><a href={story.url}>{story.title}</a></li>
+            <li key={story.id}><a href={story.url} target="_blank">{story.title}</a></li>
             <h4>{ts.toLocaleString()}</h4>
             </Fragment>
         )
